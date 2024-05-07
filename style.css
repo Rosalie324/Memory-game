@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+@font-face {
+    src: url("fonts/SunnyspellsRegular-MV9ze.otf");
+    font-family: sunny;
+}
+
+h1 {
+    text-align: center;
+    font-family: sunny;
+    font-size: 200px;
+    color: rgb(182, 5, 167);
+    
+}
+
+p {
+    text-align: center;
+    font-family: sans-serif ;
+    font-size: 100px;
+    color: beige;
+
+}
+
+h3 {
+
+    font-size: 100px;
+    color: rgb(58, 107, 93);
+}
+
+hr {
+    border-color: pink;
+    border-width: 5px;
+
+}
+
+body {
+
+    
+    height: 100vh;
+    display: flex;
+    background: url('1055726.png');
+    background-size: cover;
+    background-repeat: repeat;
+  
+    
+    
+
+}
+
+.box {
+    height: 1100px;
+    flex-wrap: wrap;
+    position: relative;
+    display: flex;
+    
+
+}
+
+.container {
+    margin: auto;
+    perspective: 500px;
+    
+}
+
+
+.grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-auto-rows: auto;
+
+    grid-gap: 2em;
+    padding: 20px;
+    
+    border-radius: 5px;
+    border: 2px solid palevioletred;
+    backface-visibility: hidden;
+    transform: scale(1);background: linear-gradient(135deg, rgba(255,255,255,0.1),rgb(217, 189, 243));
+    backdrop-filter: blur(5px);
+
+
+
+
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.grid:active {
+    transform: scale(.97);
+    transition: transform.2s;
+}
+
+.grid.flip {
+    transform: rotateY(180deg);
+}
+
